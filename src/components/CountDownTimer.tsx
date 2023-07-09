@@ -16,7 +16,7 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    const beerTime = Date.UTC(2023, 6, 10, 10, 0, 0); // May 17, 2021 in UTC
+    const beerTime = Date.UTC(2023, 6, 10, 11, 0, 0); // May 17, 2021 in UTC
 
     const countdown = setInterval(() => {
       const now = Date.now();
@@ -64,7 +64,7 @@ const CountdownTimer = () => {
     <div className="min-w-screen bg-tranparent flex items-center justify-center px-5 py-5">
       <div className="text-yellow-400">
         <h1 className="text-3xl text-center mb-3 font-extralight">
-          Token Upgrade will open
+          Token Claim will open
         </h1>
         <div className="text-6xl text-center flex w-full items-center justify-center">
           <div className="text-2xl mr-1 font-extralight">in</div>
