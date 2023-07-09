@@ -293,7 +293,7 @@ function SwapButton() {
         } else {
           if (Number(approveBalance) > 0) {
             setButtonText(
-              `Trasfer ${transferAmount / 10 ** 9} ONIGIRI NEKO Tokens`
+              `Transfer ${transferAmount / 10 ** 9} ONIGIRI NEKO Tokens`
             );
           } else {
             console.log(`approveBalance ${approveBalance}`);
