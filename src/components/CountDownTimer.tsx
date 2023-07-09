@@ -61,7 +61,7 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="min-w-screen bg-tranparent flex items-center justify-center px-5 py-5">
+    <div className="w-[380px] md:min-w-screen bg-tranparent flex items-center justify-center px-5 py-5">
       <div className="text-yellow-400">
         <h1 className="text-3xl text-center mb-3 font-extralight">
           Token Claim will open
@@ -84,8 +84,11 @@ const CountdownTimer = () => {
               Minutes
             </div>
           </div>
-          <div className="text-2xl mx-1 font-extralight">and</div>
-          <div className="w-24 mx-1 p-2 bg-white text-yellow-500 rounded-lg">
+
+          <div className="text-2xl mx-1 font-extralight hidden md:block">
+            and
+          </div>
+          <div className="w-24 mx-1 p-2 bg-white text-yellow-500 hidden md:block rounded-lg">
             <div className="font-mono leading-none">{beerData.seconds}</div>
             <div className="font-mono uppercase text-sm leading-none">
               Seconds
