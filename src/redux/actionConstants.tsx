@@ -1,0 +1,2 @@
+export const SET_BALANCE = "SET_BALANCE";
+export const UPDATE_TOKEN_BALANCE = "UPDATE_TOKEN_BALANCE";
