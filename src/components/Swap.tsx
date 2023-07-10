@@ -98,9 +98,9 @@ function Swap() {
         <div className="flex flex-col gap-4">
           {tokenTransferStatus ? (
             <>
-              {/* <ClaimButton /> */}
+              <ClaimButton />
               {/* <CountdownTimer /> */}
-              <WaitButton />
+              {/* <WaitButton /> */}
             </>
           ) : (
             // <ClaimButton />

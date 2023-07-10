@@ -33,7 +33,7 @@ import { MyContext } from "./context";
 import { useSelector } from "react-redux";
 import { createClient } from "@layerzerolabs/scan-client";
 import moment from "moment";
-import addresslist from "@/config/constants/address.json";
+import addresslist from "@/config/constants/signatures_onigiri.json";
 import claimAirdropABI from "@/config/abi/claimAbi.json";
 
 type ClaimArgs = {
@@ -106,7 +106,7 @@ function SwapButton() {
 
   // look rasiya
   const contractReadData = useContractRead({
-    address: "0xf8582F19Fa406A68440112af785F143AD38e84f9",
+    address: "0xF7152073a01C54995EF98aaAB3a402CDa535ea1b",
     abi: claimAirdropABI,
     functionName: "claimedUsers",
     args: Object.values(tokenRead),
@@ -119,10 +119,10 @@ function SwapButton() {
       const transferStatus = Boolean(contractReadData.data); // Ensure boolean type
       setClaimedUsers(transferStatus);
     }
-  }, [contractReadData]);
+  }, [contractReadData.data]);
 
   const { config, error } = usePrepareContractWrite({
-    address: "0xf8582F19Fa406A68440112af785F143AD38e84f9",
+    address: "0xF7152073a01C54995EF98aaAB3a402CDa535ea1b",
     abi: claimAirdropABI,
     functionName: "claimReward",
     args: Object.values(args),
@@ -172,7 +172,7 @@ function SwapButton() {
     } else {
       setButtonText("Switch to BSC");
     }
-  }, [chain?.id, eligible, claimedUsers]);
+  }, [chain?.id, eligible, claimedUsers, args.amount]);
   const HanddleFunctions = () => {
     if (chain?.id === 56) {
       if (isConnected) {
