@@ -90,13 +90,16 @@ function Swap() {
     }
   }, [contractReadData]);
 
+  // console.log(tokenTransferStatus);
+
   return (
     <MyContext.Provider value={contextValue}>
       <div className="p-4 mx-auto mt-60 mb-[86px] text-black dark:text-white flex flex-col gap-4 w-full max-w-[520px]">
         <div className="flex flex-col gap-4">
           {tokenTransferStatus ? (
             <>
-              <CountdownTimer />
+              <ClaimButton />
+              {/* <CountdownTimer /> */}
               {/* <WaitButton /> */}
             </>
           ) : (
